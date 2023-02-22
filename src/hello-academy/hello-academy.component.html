@@ -1,0 +1,24 @@
+<p [style.color]="color">
+Hello Ebit {{ who }} Good work!
+</p>
+
+<p>My Color is: {{color}}</p>
+<button type="button" 
+        [disabled]="isDisabled" 
+        (click)="changeWho()">Click Me!</button>
+
+<button type="button" 
+        (click)="reset()">Reset!</button>
+
+<section>
+  <button (click)="onEditClick()">Make text Editable</button>
+
+  <div *ngIf="!canEdit">
+    <p>The following paragraph is read-only</p>
+  </div>
+
+ <p *ngIf="canEdit">You can edit de following paragraph</p>
+ <p [contentEditable]=canEdit>{{paragraph}}</p>
+
+ 
+</section>
